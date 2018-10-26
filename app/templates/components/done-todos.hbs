@@ -1,1 +1,9 @@
 {{yield}}
+
+{{title}}
+
+<ul>
+    {{#each doneTodos as | done |}}
+        <li>{{ done }}</li>
+    {{/each}}
+</ul>

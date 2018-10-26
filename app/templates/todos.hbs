@@ -1,8 +1,10 @@
 {{!-- {{outlet}} --}}
 
-<h2>List of Todos</h2>
+{{!-- <h2>List of Todos</h2>
 <ul>
     {{#each model as |todo|}}
         <li>{{todo}}</li>
     {{/each}}
-</ul>
+</ul> --}}
+
+{{done-todos title="List of Todos" doneTodos=model}}
