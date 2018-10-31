@@ -1,9 +1,9 @@
-{{yield}}
+{{!-- {{yield}} --}}
 
 {{title}}
 
 <ul>
     {{#each todos as | todo |}}
-        <li>{{ todo }}</li>
+        <li {{action "viewTodo" todo}}>{{ todo }}</li>
     {{/each}}
 </ul>
