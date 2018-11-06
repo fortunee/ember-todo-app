@@ -28,7 +28,7 @@ export default Controller.extend({
         addTodo() {
             alert(`Adding todo ${this.get('todoItem')} in progress`);
             this.set('responseMessage',
-                `${this.get('todoItem')} has been successfully added to your list of todos`)
+                `"${this.get('todoItem')}" has been successfully added to your list of todos`)
             this.set('todoItem', '');
         }
     },
