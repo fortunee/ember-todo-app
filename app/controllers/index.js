@@ -15,12 +15,10 @@ export default Controller.extend({
     isDisabled: empty('todoItem'),
 
     getTodoItem: computed('todoItem', function() {
-        console.log('Getting actual todo item', this.get('todoItem'));
         return this.get('todoItem');
     }),
 
     onTodoItemChange: observer('todoItem', function() {
-        console.log('Observing todo item', this.get('todoItem'));
         return this.get('todoItem');
     }),
 
