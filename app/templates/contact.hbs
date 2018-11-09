@@ -3,6 +3,10 @@
   <form class="form-horizontal">
     <div class="form-group">
       <div class="col-sm-6">
+        {{#if responseMessage}}
+          <div class="alert alert-success">{{responseMessage}}</div>
+        {{/if}}
+
         <p><label for="inputEmail" class="control-label">Email:</label></p>
         {{input
           type="email"

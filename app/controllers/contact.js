@@ -4,6 +4,7 @@ import { gte, match, not, and } from '@ember/object/computed';
 export default Controller.extend({
     emailAddress: '',
     message: '',
+    responseMessage: '',
 
     isValid: match('emailAddress', /^.+@.+\..+$/),
     isLongEnough: gte('message.length', 5),
@@ -12,7 +13,10 @@ export default Controller.extend({
 
     actions: {
         sendMessage() {
-            alert(`${this.get('emailAddress')} is trying to send ${this.get('message')}`)
+            alert(`${this.get('emailAddress')} is trying to send ${this.get('message')}`);
+            this.set('responseMessage', 'Message received! We will be in touch. Thanks');
+            this.set('emailAddress', '')
+            this.set('message', '')
         }
     },
 });
