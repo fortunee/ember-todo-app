@@ -10,4 +10,9 @@ export default Controller.extend({
     isBothTrue: and('isValid', 'isLongEnough'),
     isDisabled: not('isBothTrue'),
 
+    actions: {
+        sendMessage() {
+            alert(`${this.get('emailAddress')} is trying to send ${this.get('message')}`)
+        }
+    },
 });
