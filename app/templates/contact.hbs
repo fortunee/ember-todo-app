@@ -3,19 +3,19 @@
   <form class="form-horizontal">
     <div class="form-group">
       <div class="col-sm-6">
-        <p><label for="inputEmail3" class="control-label">Email:</label></p>
-        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        <p><label for="inputEmail" class="control-label">Email:</label></p>
+        {{input type="email" value=emailAddress class="form-control" placeholder="Email" autofocus="autofocus"}}
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-6">
-        <p><label for="inputPassword3" class="control-label">Message:</label></p>
-        <textarea class="form-control" rows="3"></textarea>      
+        <p><label for="message" class="control-label">Message:</label></p>
+        {{textarea class="form-control" placeholder="Your message. (At least 5 characters.)" rows="7" value=message}}      
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-6">
-        <button type="submit" class="btn btn-default">Send</button>
+        <button type="submit" class="btn btn-default" disabled={{isDisabled}}>Send</button>
       </div>
     </div>
   </form>
