@@ -24,9 +24,12 @@ export default Controller.extend({
 
     actions: {
         addTodo() {
-            alert(`Adding todo ${this.get('todoItem')} in progress`);
+            const todoItem = this.get('todoItem');
+            const newTodoItem = this.store.createRecord('todo', { todoItem });
+            newTodoItem.save();
+
             this.set('responseMessage',
-                `"${this.get('todoItem')}" has been successfully added to your list of todos`)
+                `"${todoItem}" has been successfully added to your list of todos`)
             this.set('todoItem', '');
         }
     },
