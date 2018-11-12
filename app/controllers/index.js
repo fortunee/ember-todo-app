@@ -26,11 +26,12 @@ export default Controller.extend({
         addTodo() {
             const todoItem = this.get('todoItem');
             const newTodoItem = this.store.createRecord('todo', { todoItem });
-            newTodoItem.save();
+            newTodoItem.save().then(response => {
+                this.set('responseMessage',
+                    `"${todoItem}" with id "${response.get('id')}" has been successfully added to your list of todos`)
+                this.set('todoItem', '');
+            });
 
-            this.set('responseMessage',
-                `"${todoItem}" has been successfully added to your list of todos`)
-            this.set('todoItem', '');
         }
     },
 
