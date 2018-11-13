@@ -4,6 +4,6 @@
 
 <ul>
     {{#each todos as | todo |}}
-        <li {{action "viewTodo" todo}}>{{ todo }}</li>
+        <li {{action "viewTodo" todo.todoItem}}>{{ todo.todoItem }}</li>
     {{/each}}
 </ul>
