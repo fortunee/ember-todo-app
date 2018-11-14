@@ -1,9 +1,18 @@
-{{!-- {{yield}} --}}
-
 {{title}}
 
-<ul>
-    {{#each todos as | todo |}}
-        <li {{action "viewTodo" todo.todoItem}}>{{ todo.todoItem }}</li>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Todo ID</th>
+      <th>Todo Item</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each todos as |todo|}}
+      <tr>
+        <td>{{todo.id}}</td>
+        <td>{{todo.todoItem}}</td>
+      </tr>
     {{/each}}
-</ul>
+  </tbody>
+</table>
