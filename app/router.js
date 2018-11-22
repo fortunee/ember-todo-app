@@ -9,6 +9,8 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('todos');
   this.route('contact');
+  this.route('in-progress');
+  this.route('completed');
 });
 
 export default Router;

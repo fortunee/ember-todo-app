@@ -16,9 +16,11 @@
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-right">
         {{#link-to "index" tagName="li"}}<a href="">Home</a>{{/link-to}}
         {{#link-to "todos" tagName="li"}} <a href="">Todos</a> {{/link-to}}
+        {{#link-to "in-progress" tagName="li"}} <a href="">In Progress</a> {{/link-to}}
+        {{#link-to "completed" tagName="li"}} <a href="">Completed</a> {{/link-to}}
         {{#link-to "contact" tagName="li"}} <a href="">Contact</a> {{/link-to}}
       </ul>
     </div>
