@@ -9,7 +9,7 @@
   <tbody>
     {{#each todos as |todo|}}
       <tr>
-        <td>{{todo.todoItem}} <button class="btn btn-primary pull-right">start</button></td>
+        <td>{{todo.todoItem}} <button class="btn btn-primary pull-right">{{action-status}}</button></td>
       </tr>
     {{/each}}
   </tbody>
